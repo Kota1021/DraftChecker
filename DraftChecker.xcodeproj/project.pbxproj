@@ -14,6 +14,9 @@
 		8A200C57292B761D00C993CE /* DraftCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A200C56292B761D00C993CE /* DraftCheckerTests.swift */; };
 		8A200C61292B761D00C993CE /* DraftCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A200C60292B761D00C993CE /* DraftCheckerUITests.swift */; };
 		8A200C63292B761D00C993CE /* DraftCheckerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A200C62292B761D00C993CE /* DraftCheckerUITestsLaunchTests.swift */; };
+		8A200C70292B76BE00C993CE /* Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A200C6F292B76BE00C993CE /* Ranges.swift */; };
+		8A200C72292B76CF00C993CE /* Wordlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A200C71292B76CF00C993CE /* Wordlist.swift */; };
+		8A200C75292B76E500C993CE /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 8A200C74292B76E500C993CE /* OrderedCollections */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,8 @@
 		8A200C5C292B761D00C993CE /* DraftCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DraftCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A200C60292B761D00C993CE /* DraftCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftCheckerUITests.swift; sourceTree = "<group>"; };
 		8A200C62292B761D00C993CE /* DraftCheckerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftCheckerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8A200C6F292B76BE00C993CE /* Ranges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranges.swift; sourceTree = "<group>"; };
+		8A200C71292B76CF00C993CE /* Wordlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordlist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A200C75292B76E500C993CE /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,8 @@
 			children = (
 				8A200C44292B761C00C993CE /* DraftCheckerApp.swift */,
 				8A200C46292B761C00C993CE /* ContentView.swift */,
+				8A200C6F292B76BE00C993CE /* Ranges.swift */,
+				8A200C71292B76CF00C993CE /* Wordlist.swift */,
 				8A200C48292B761D00C993CE /* Assets.xcassets */,
 				8A200C4D292B761D00C993CE /* DraftChecker.entitlements */,
 				8A200C4A292B761D00C993CE /* Preview Content */,
@@ -145,6 +153,9 @@
 			dependencies = (
 			);
 			name = DraftChecker;
+			packageProductDependencies = (
+				8A200C74292B76E500C993CE /* OrderedCollections */,
+			);
 			productName = DraftChecker;
 			productReference = 8A200C41292B761C00C993CE /* DraftChecker.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 8A200C38292B761C00C993CE;
+			packageReferences = (
+				8A200C73292B76E500C993CE /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 8A200C42292B761C00C993CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A200C47292B761C00C993CE /* ContentView.swift in Sources */,
+				8A200C72292B76CF00C993CE /* Wordlist.swift in Sources */,
 				8A200C45292B761C00C993CE /* DraftCheckerApp.swift in Sources */,
+				8A200C70292B76BE00C993CE /* Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +584,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A200C73292B76E500C993CE /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A200C74292B76E500C993CE /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A200C73292B76E500C993CE /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A200C39292B761C00C993CE /* Project object */;
 }
